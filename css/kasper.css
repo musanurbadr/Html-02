@@ -733,27 +733,143 @@ color: var(--main-color);
       gap: 30px;
     }
     .pricing .plans .plan {
-      background-color: #19c8fa;
       text-align: center;
     }
     .pricing .plans .plan .head{
-      
+      padding: 40px 20px ;
+      border-top: 1px solid var(--main-color);
+      border-bottom: 1px solid var(--main-color);
     }
     .pricing .plans .plan .head h3{
-      
+      font-weight: normal;
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
     .pricing .plans .plan .head span{
-      
+      font-size: 60px;
+      font-weight: bold;
     }
     .pricing .plans .plan .head span::before{
       content: '$';
+      font-size: 25px;
+      position: relative;
+      top: -40px;
+      margin-right: 15px;
+      font-weight: normal;
     }
     .pricing .plans .plan .head span::after{
       content: '/Mo';
-    }    /* End Pricing */
+      font-size: 20px;
+      position: relative;
+      right: -15px;
+    }   
+    .pricing .plans .plan ul{
+      border-bottom:1px solid var(--main-color) ;
+    }
+    .pricing .plans .plan ul li  {
+      padding: 20px;
+    }
+    .pricing .plans .plan ul li:not(:last-child)::after{
+      content: "";
+      width: 120px;
+      height: 1px ;
+      position: absolute;
+      background-color: var(--main-color);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0 ;
+    }
+    .pricing .plans .plan .foot a {
+      display: block;
+      padding: 20px 20px ;
+      text-decoration: none;
+      border: 1px solid var(--main-color);
+      width: fit-content;
+      margin: 30px auto;
+    }
+    .pricing .contact-text {
+      text-align: center;
+      margin: 50px auto 20px ;
+      font-size: 20px;
+    }
+    
+    .pricing .contact-link {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      background-color: var(--main-color);
+      color: white;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+    /* End Pricing */
 
+    /*Start Subscribe   */
+    
+    .subscribe{
+      padding-top: var(--section-padding);
+      padding-bottom: var(--section-padding);
+      background-image: url(../immgs/images-001.jpeg);
+      background-size: cover;
+      position: relative;
+      color: white;
+    }
+    .subscribe::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width:100%;
+      height: 100%;
+      background-color: rgb(0 0 0 / 50%);
+    }
+    .subscribe .container{
+      position: relative;
+      display: flex;
+      align-items: center;
 
-
+    }
+    @media (max-width : 991px) {
+      .subscribe .container{
+        flex-direction: column;
+      }
+    }.subscribe form {
+      display: flex;
+      position: relative;
+      width: 500px;
+      max-width: 100%;
+    }
+    .subscribe form i {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 25px;
+    }
+    .subscribe form input[type="email"] {
+      border: 1px solid white;
+      border-right: none;
+      background: none;
+      padding: 20px 20px 20px 60px;
+      caret-color: var(--main-color);
+      width: calc(100% - 130px);
+    }
+    .subscribe form input[type="submit"] {
+      width: 130px;
+      background-color: var(--main-color);
+      color: white;
+      padding: 10px 20px;
+      border: 1px solid white;
+      border-left: none;
+      text-transform: uppercase;
+    }
+    .subscribe form input[type="email"]:focus,
+    .subscribe form input[type="submit"]:focus {
+      outline: none;
+    }
+    .subscribe form ::placeholder {
+      color: white;
+    }
+    /* <!-- Start Subscribe  --> */
 
 
 
